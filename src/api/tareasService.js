@@ -1,7 +1,7 @@
 import * as path from './ConstApi';
 import request from './requestService';
 
-export function agregarTarea(titulo, prioridad, vencimiento, finalizado) {
+export function agregarTarea({titulo, prioridad, vencimiento, finalizado}) {
     let object = {
       titulo,
       prioridad,
@@ -76,7 +76,7 @@ export function agregarTarea(titulo, prioridad, vencimiento, finalizado) {
       });
   }
 
-  export function editarTarea(tareaid, titulo, prioridad, vencimiento, finalizado) {
+  export function editarTarea({tareaid, titulo, prioridad, vencimiento, finalizado}) {
     let object = {
       titulo,
       prioridad,

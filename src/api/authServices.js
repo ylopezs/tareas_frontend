@@ -56,5 +56,5 @@ export function registrar(name, email, password) {
   }
 
   export function getToken(){
-    localStorage.getItem("userToken");
+    return localStorage.getItem("userToken");
   }
