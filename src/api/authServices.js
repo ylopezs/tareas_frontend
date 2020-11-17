@@ -19,7 +19,7 @@ export function registrar(name, email, password) {
         localStorage.setItem("userToken", response.data.token)
         //localStorage.setItem("userRole", response.data.role)
         //localStorage.setItem("userEmail", email)
-        localStorage.setItem("expiresIn", expiresIn);
+        localStorage.setItem("expiresIn", response.data.expiresIn);
         return response.data;
       })
       .catch(error => {
@@ -42,7 +42,7 @@ export function registrar(name, email, password) {
     )
       .then(response => {
         localStorage.setItem("userToken", response.data.token)
-        localStorage.setItem("expiresIn", expiresIn);
+        localStorage.setItem("expiresIn", response.data.expiresIn);
         return response.data;
       })
       .catch(error => {
